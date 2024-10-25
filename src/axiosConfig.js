@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create an Axios instance with a base URL
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8800/api'  // Replace with your backend URL
+  baseURL: import.meta.env.BACKEND_BASE_URL  // Replace with your backend URL
 });
 
 const token = localStorage.getItem('token');
