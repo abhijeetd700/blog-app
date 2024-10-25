@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Delete from "../assets/delete.png"
-import Edit from "../assets/edit.png"
+import Delete from "/static/delete.png"
+import Edit from "/static/edit.png"
 import { useContext, useEffect, useState } from "react";
 import axiosInstance from "../axiosConfig";
 import { AuthContext } from "../authContext";
@@ -94,7 +94,7 @@ function Single() {
                 <img src={`/upload/${post?.img_url}`} />
             </div>
             <div className="user">
-                <img src={`/upload/default_user_image.png`} />
+                <img src={`/static/default_user_image.png`} />
                <div className="info">
                     <span>{user?.username}</span>
                     <p>Posted {moment(post?.createdAt).fromNow()}</p>
