@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* Add other reset styles as needed */
+}
+$lightCyan:lightcyan;
+
+.app{
+    display: flex;
+    justify-content: center;
+    // background-color: lightcyan;
+
+    .link{
+        text-decoration: none; /* Removes the underline */
+        color: inherit;       /* Makes the link color inherit from its parent */
+        cursor: pointer;      /* Changes the cursor to a pointer when hovering */
+    }
+    // LOGIN & REGISTER
+    .container{
+        width: 1024px;
+
+        // margin-top: 10px;
+        .auth{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 100vh;
+            flex-direction: column;
+            h1{
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: teal;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                gap:20px;
+                padding: 50px 30px;
+                background-color: white;
+
+                input{
+                    border: none;              /* Removes all borders */
+                    border-bottom: 1px solid lightgray;  /* Adds a bottom border */
+                    outline: none;             /* Removes the focus outline if needed */
+                    padding: 5px;   
+                }
+                button{
+                    background-color: teal;
+                    color: white;
+                    padding: 5px;
+                    border: none;
+                    cursor: pointer;
+                                        
+                }
+                p{
+                    font-size: small;
+                    text-align: center;
+                    color: red;
+                }
+                span{
+                    font-size: small;
+                    text-align: center;
+                }
+                
+            }
+        }
+
+    }
+
+    // NAVBAR & footer
+    .navbar{
+        
+        margin: 10px 0px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+        
+            .logo{
+                img{
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+            .links{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:10px;
+                span{
+                    cursor: pointer;
+                }
+                h6{
+                    font-weight: 300;
+                    font-size: 16px;
+                }
+                .write{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: lightcyan;
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 30px;
+                    &:hover{
+                        background-color: white;
+                        color: teal;
+                        border: 1px solid teal;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        background-color: $lightCyan;
+        align-items: center;
+        margin-top: 70px;
+        font-size: 15pxpx;
+        img{
+            height: 70px;
+            width: 70px;
+        }
+
+        span{
+            margin-right: 30px;
+        }
+    }
+
+    //Home
+    .home{
+
+        .posts{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+            
+            .postError{
+                display: flex;
+                justify-content: center;
+            }
+            .post{
+                display: flex;
+                gap: 50px;
+                
+                &:nth-child(2n+1){
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+                .img{
+                    flex:2;
+                    position: relative;
+                    &::after{
+                        
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: $lightCyan;
+                        position: absolute;
+                        left:-20px;
+                        top:20px;
+                        z-index: -1;
+                    }
+                    img {
+                        width: 100%;
+                        max-height: 400px;
+                        object-fit: cover;
+                    }
+                    
+                    
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex: 3;
+                    h1{
+                        font-size: 50px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                    button{
+                        width: max-content;
+                        background-color: white;
+                        color: teal;
+                        padding: 15px;
+                        border: 2px solid teal;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            background-color: teal;
+                            color: white;
+                        }
+                    }
+
+                }
+           
+            }
+        }
+    }
+
+    //Single
+    .single{
+        display: flex;
+        gap: 30px;
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            flex: 5;
+            
+                img{
+
+                    width: 100%;
+                    max-height: 300px;
+                    object-fit: cover;
+                }   
+        
+            .user{
+                display: flex;
+                gap: 10px;
+
+                img{
+                    height: 50px;
+                    width: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                .info{
+                    // margin-left: 5px;
+                    span{
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+                .icons{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    img{
+                        height: 30px;
+                        width: 30px;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            .post{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+                h1{
+                    color: #333;
+                    font-size: 40px;
+                }
+                p{
+                    text-align: justify;
+                    line-height: 30px;
+                }
+            }
+        }
+        .menu{
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+
+            h3{
+                color: #555;
+            }
+            .post{
+                h2{
+                    color: #555;
+                    font-size: 28px;
+                }   
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                img{
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                button{
+                    background-color: teal;
+                    color: white;
+                    padding: 15px;
+                    border: none;
+                    cursor: pointer;
+                    max-width: max-content;
+                    
+                    &:hover{
+                        background-color: white;
+                        color: teal;
+                        border: 1px solid teal;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    //Write
+    .add{
+        margin-top: 20px;
+        display: flex;
+        gap:20px;
+        height: 500px;
+        .content{
+            flex:5;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+
+            input{
+                padding: 10px;
+                border: 1px solid lightgrey;
+            }
+
+            .editorContainer{
+                height: 500px;
+                border: 1px solid lightgray;
+                overflow: auto;
+                .editor .ql-container {
+                    height: 100%;
+                    border:none;
+                }
+      
+            }
+
+        }
+        .menu{
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            // max-height: 200px;
+            // border: 1px lightgrey;
+            .item{
+                color: #555;
+                border: 1px solid lightgray;
+                padding: 10px;
+                flex: 1; 
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+
+                h2{
+                    font-size: 20px;
+                }
+                span{
+                    font-size: 14px;
+                }
+                .file{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                .updates{
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .first{
+                        padding: 10px;
+                        background-color: white;
+                        color: teal;
+                        border: 1px solid teal;
+                        &:hover{
+                            background-color: teal;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                    .last{
+                        padding: 5px;
+                        background-color: teal;
+                        color: white;
+                        border: 1px solid white;
+                        &:hover{
+                            background-color: white;
+                            color: teal;
+                            cursor: pointer;
+                            border: 1px solid teal;
+                        }
+                    }
+
+                }
+                .cat{
+                    display: flex;
+                    gap:10px;
+                }
+            }
+            
+
+        }
+    }
+
+}
