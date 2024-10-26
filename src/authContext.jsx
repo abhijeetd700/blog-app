@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext()
 
 export const AuthContextProvider = ({children})=>{
-
+    //
     const [currUser,setCurrUser] = useState(JSON.parse(localStorage.getItem("user"))||null)
     
     const login = async (inputs)=>{
