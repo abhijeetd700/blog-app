@@ -73,7 +73,7 @@ function Home() {
                 return(
                 <div className="post" key={post.id}>
                     <div className="img">
-                        <img src={`/upload/${post.img_url}`} />
+                        <img src={`${import.meta.env.VITE_BACKEND_URL}/static/${post.img_url}`} />
                     </div>
                     <div className="content">
                         <Link className="link" to={`/post/${post.id}`}>

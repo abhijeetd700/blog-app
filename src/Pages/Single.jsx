@@ -91,7 +91,7 @@ function Single() {
     <div className="single">
         <div className="content">
             <div className="img">
-                <img src={`/upload/${post?.img_url}`} />
+                <img src={`${import.meta.env.VITE_BACKEND_URL}/static/${post?.img_url}`} />
             </div>
             <div className="user">
                 <img src={`/static/default_user_image.png`} />

@@ -19,7 +19,7 @@ function Menu({category}) {
             <h3>Other posts you may like</h3>
             {posts?.map((post) => (
                 <div className="post" key={post?.id}>
-                    <img src={`/upload/${post?.img_url}`} alt="" />
+                    <img src={`${import.meta.env.VITE_BACKEND_URL}/static/${post?.img_url}`} alt="" />
                     <h2>{post?.title}</h2>
                     <Link to={`/post/${post.id}`}>
                         <button>Read More</button>
